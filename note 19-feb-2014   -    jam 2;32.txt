@@ -1,0 +1,44 @@
+udah jam 2 ya? hha
+oke salam dulu xD
+
+1. folder nya gua namain YPI3
+2. Database gua ambil yg ypi3.sql kenapa? soalnya :
+3. di dalem DB, tabel kunjungan_pasien ada atribut resep_obat,
+sementara ketika kalian buka pasien dan masuk ke detailed pasien, ketika ingin INPUT DETAILED PASIEN, RESEP OBAT itu kalian ISI dengan ID_OBAT,
+nah buat apa ada atribut RESEP OBAT di tabel kunjungan_pasien nya?  MAKANYA gua hapus ni ya atribut resep_obat di tabel KUNJUNGAN_PASIEN nya !!
+4. sehubung gua pake DB ypi3.sql  MAKANYA koneksi.php yang di FOLDER Connections gua ganti juga isi nya jadi "ypi3" ya?? terus password admin nya gua ubah lagi jadi "admin" kalian ubah lagi ajah.
+
+5. DB ypi3 ini HAMPIR SAMA kaya DB hotline3.sql yg terakhir kalian kirim ke gua tadi ya..
+    BEDA nya cuma yg barusan gua jelasin di POINT (3) diatas..
+    JADI kalo kalian ttep mau pake DB hotline 3 ya dapus jgn lupa ATRIBUT RESEP_OBAT yg ada di tabel KUNJUNGAN_PASIEN.
+
+6. LAPORAN PASIEN ALL udah FIX
+7. LAPORAN PASIEN ALL2 udah FIX
+8. LAPORAN PENELEPON ALL udah FIX
+9. LAPORAN PENELEPON ALL2 udah FIX
+
+10. gua bikin menu LAPORAN KLINIK sama LAPORAN HOTLINE di menu SEBELAH KIRI INTERFACE.
+11. ISI NYA ADA DI FOLDER KONSELOR/DATA/LAPORAN :
+	- laporan_klinik.php
+	- laporan_hotline.php
+
+12.  DALAM LAPORAN_KLINIK.PHP ada 3 FUNGSI LAPORAN YANG GUA BUAT :
+	- Berdasarkan Tanggal    ->   Manggil File pasien_tgl.php di FOLDER YPI3/LAPORAN
+	- Berdasarkan Bulan    ->   Manggil File pasien_bln.php di FOLDER YPI3/LAPORAN
+	- Berdasarkan Tahun    ->   Manggil File pasien_thn.php di FOLDER YPI3/LAPORAN
+
+13. IDEM BUAT LAPORAN_PENELEPON
+
+14. LAPORAN KLINIK nampilin laporan berdasarkan data KUNJUNGAN_PASIEN
+15. LAPORAN HOTLINE nampilin laporan berdasarkan data Konseling
+
+16. cara gunain laporan berdasarkan tanggal di pilih aja DARI TANGGAL sama SAMPIA DENGAN TANGGAL nya..  
+      sebelum pilih tanggal nya, liat dulu di DATABASE nya buat mastiin ketepatan data.
+17. Laporan berdasarkan bulan, BERARTI CUMA NAMPILIN DATA TRANSAKSI sesuai dengan BULAN PADA TAHUN SEKARANG !
+18. Laporan berdasarkan tahun gua bikin range nya dari tahun 2009 - 2025.. kalo mau ubah ya ubah di laporan_klinik.php / laporan_hotline.php nya..
+
+19. LAPORAN KLINIK FIX
+20. LAPORAN HOTLINE FIX
+
+Oke semoga NGERTI ya??  kalo ada apa-apa lgsg kabarin aja ya... kalian klo mau implementasiin nya, ya implementasiin nya aja dulu, klo ada yg gak ngarti tanya lagi ajah,
+oke semangat semua nya.. good luck, smoga lancar presentasiin nya lagi ya ^_^

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sistem Informasi Sketsa YPI</title>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="1" cellpadding="5">
+  <tr>
+    <th width="30%" scope="row"><div align="left">No. RM :</div></th>
+    <th width="70%" scope="col">'.$data[&quot;no_rm&quot;].'</th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left">Nama Pasien :</div></th>
+    <th scope="col">'.$data[&quot;nama_pasien&quot;].'</th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left">Alamat :</div></th>
+    <th scope="col">'.$data[&quot;alamat_pasien&quot;].'</th>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="100%" border="1" cellspacing="1" cellpadding="5">
+  <tr>
+    <th width="5%" scope="col">No.</th>
+    <th width="15%" scope="col">Tanggal Kunjungan</th>
+    <th width="20%" scope="col">Nama Dokter</th>
+    <th width="30%" scope="col">Diagnosa</th>
+    <th width="10%" scope="col">Resep Obat</th>
+    <th width="20%" scope="col">Keterangan</th>
+  </tr>
+  <tr>
+    <th scope="row">'.$data["no"].'</th>
+    <td>'.$data["tanggal_kunjungan"].'</td>
+    <td>'.$data["nama_dokter"].'</td>
+    <td>'.$data["diagnosa_pasien"].'</td>
+    <td>'.$data["nama_obat"].'</td>
+    <td>'.$data["keterangan"].'</td>
+  </tr>
+</table>
+</body>
+</html>

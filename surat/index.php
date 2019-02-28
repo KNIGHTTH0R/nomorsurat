@@ -7,7 +7,7 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="shortcut icon" href="#"> 
+<link rel="shortcut icon" href="../../images/logo_mig.jpeg"/> 
 <title>Penomoran Surat MIG</title>
 <link rel="stylesheet" href="../css/style.css" type="text/css" />
 <script type="text/javascript" src="../js/plugins/jquery-1.7.min.js"></script>
@@ -55,7 +55,7 @@ session_start();
 
 <br /><br />
                	  <ul class="widgetlist">
-                    	<img width="600" height="320" src="../images/logo_mig.png" /></a>
+                    	<img width="600" height="320" src="../images/logo_mig.jpeg" /></a>
                   </ul>
                     
                     <br clear="all" /><br />

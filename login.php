@@ -46,7 +46,7 @@ $(document).ready(function(){
 	<div class="loginboxinner radius3">
     	<div class="loginheader">
     		<h1 class="bebas">Login</h1>
-       	  <div class="logo"><img src="images/logo_mig.png" alt="" height="75" /></div>
+       	  <div class="logo"><img src="images/logo_mig.jpeg" alt="" height="75" /></div>
     	</div><!--loginheader-->
         
         <div class="loginform">

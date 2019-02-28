@@ -94,7 +94,7 @@ $tampil = mysql_query($query,$koneksi);?>
                             <span class="field" >
                             <select name="id_document" id="id_document" required="required"> 
                   <?php
-                  $kdins = "select * from jenis_doc order by nama_document ASC";
+                  $kdins = "select * from jenis_doc where  nama_document = 'Surat Keputusan Direksi (SK)'";
                   $inskd = mysql_query($kdins, $koneksi);
                   while($kode=mysql_fetch_array($inskd)){
                     $nama_document=$kode["nama_document"];
@@ -126,7 +126,7 @@ $tampil = mysql_query($query,$koneksi);?>
 
                             <select name="id_penandatangan" id="penandatangan" required="required"> 
                   <?php
-                  $kdttd = "select * from penandatangan order by nama_penandatangan ASC";
+                  $kdttd = "select * from penandatangan where nama_penandatangan = 'Direktur Utama'";
                   $inttd = mysql_query($kdttd, $koneksi);
                   while($kode=mysql_fetch_array($inttd)){
                     $nama_penandatangan=$kode["nama_penandatangan"];

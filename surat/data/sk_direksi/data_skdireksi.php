@@ -8,7 +8,7 @@ session_start();
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="../../../images/bprs/logo.png">
-<title>Penomoran Surat MIG</title>
+<title>Penomoran Surat Perusahaan</title>
 <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 <script type="text/javascript" src="../../../js/plugins/jquery-1.7.min.js"></script>
 <script type="text/javascript" src="../../../js/plugins/jquery.dataTables.min.js"></script>
@@ -71,6 +71,7 @@ include "../../../Connections/tgl.php";
                         <col class="con0" />
                         <col class="con1" />
                         <col class="con0" />
+                        <col class="con1" />
 						<col class="con1" />
 						<col class="con0" />
 						<col class="con1" />
@@ -80,7 +81,8 @@ include "../../../Connections/tgl.php";
                         <tr>
     <td><div align="center"><strong>No.</strong></div></td>
     <td><div align="center"><strong>Nomor Surat</strong></div></td>
-     <td><div align="center"><strong>Nama Perusahaan</strong></div></td>
+     <td><div align="center"><strong>Tanggal</strong></div></td>
+      <td><div align="center"><strong>Nama Perusahaan</strong></div></td>
     <td><div align="center"><strong>Keterangan</strong></div></td>
      <td><div align="center"><strong>Nama User</strong></div></td>
     <td><div align="center"><strong>Aksi</strong></div></td>
@@ -90,7 +92,7 @@ include "../../../Connections/tgl.php";
                     <tbody>
                     
        <?php
-       $query = "select nomor_skdir, nama_perusahaan, keterangan, nama_lengkap from sk_dir inner join user on user.ID_user=sk_dir.ID_user inner join tb_perusahaan on tb_perusahaan.id_perusahaan = sk_dir.id_perusahaan";
+       $query = "select nomor_skdir,tanggal, nama_perusahaan, keterangan, nama_lengkap from sk_dir inner join user on user.ID_user=sk_dir.ID_user inner join tb_perusahaan on tb_perusahaan.id_perusahaan = sk_dir.id_perusahaan";
 	   $exec = mysql_query($query); 
 	   ?>
                     
@@ -101,12 +103,13 @@ while($data=mysql_fetch_array($exec)){ ?>
   <tr>
     <td><div align="center"><?php echo $no; ?></div></td>
     <td><div align="center"><?php echo $data['nomor_skdir']; ?></div></td>
-    <td><div align="center"><?php echo $data['nama_perusahaan']; ?></div></td>
+    <td><div align="center"><?php echo $data['tanggal']; ?></div></td>
+     <td><div align="center"><?php echo $data['nama_perusahaan']; ?></div></td>
     <td><div align="center"><?php echo $data['keterangan']; ?></div></td>
     <td><div align="center"><?php echo $data['nama_lengkap']; ?>
         
     </div></td>
-    <td><div align="center"><a href="update_skdireksi.php?id=<?php echo $data['id']; ?>"><img src="../../images/edit.png" width="15" height="15" /></a> | <a href="delete_skdireksi.php?id=<?php echo $data['id']; ?>"><img src="../../images/delete.png" width="20" height="20"/></a></div></td>
+    <td><div align="center"><a href="delete_skdireksi.php?id=<?php echo $data['id']; ?>"><img src="../../images/delete.png" width="20" height="20"/></a></div></td>
   </tr>
  
   <?php 

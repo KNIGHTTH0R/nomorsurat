@@ -30,7 +30,7 @@ $id_penandatangan =$_POST['id_penandatangan'];
 $tanggal =$_POST['tanggal'];
 $keterangan =$_POST['keterangan'];
 // $ID_user =$_POST['ID_user'];
-$bulan_romawi = bln_romawi($tanggal);
+// $bulan_romawi = bln_romawi($tanggal);
 $tahun = tahun ($tanggal);
  // membaca kode / nilai tertinggi dari penomoran yang ada didatabase berdasarkan tanggal
     // $query2 = "SELECT max (nomor_skdir,0,3)+1 as maxKode FROM sk_dir WHERE month(tanggal)='$bulan_romawi'";

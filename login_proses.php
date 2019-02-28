@@ -22,8 +22,8 @@ if ($hslPeriksa >= 1 )
 	# Jika sukses
 	$_SESSION['username'] = $txtUser;
 	$_SESSION['ID_user'] = $data['ID_user'];
-	$level = $data['level_user'];
-	$_SESSION['level'] = $level; 
+	$level = $data['id_level'];
+	$_SESSION['id_level'] = $level; 
 	$sql_update = "UPDATE `user` SET  `status` = '"."login"."' ,`last_login` =  '".$tgl."'   WHERE `ID_user` ='$data[ID_user]' "; 		
 	mysql_query($sql_update);	
 	
@@ -31,7 +31,7 @@ if ($hslPeriksa >= 1 )
 			
 			
 			
-	if($level=="administrator")
+	if($level=="100000")
 		{
 
 	$sqlAdmin = "SELECT * FROM user WHERE ID_user='$data[ID_user]' ";

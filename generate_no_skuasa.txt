@@ -1,0 +1,34 @@
+DELIMITER $$
+
+USE `e-surat`$$
+
+DROP TRIGGER /*!50032 IF EXISTS */ `generate_no_skuasa`$$
+
+CREATE
+    /*!50017 DEFINER = 'root'@'localhost' */
+    TRIGGER `generate_no_skuasa` BEFORE INSERT ON `suratkuasa` 
+    FOR EACH ROW BEGIN
+IF MONTH(NEW.tanggal)='1' THEN SET @bln = 'I';
+	ELSEIF MONTH(NEW.tanggal)='2' THEN SET @bln = 'II';
+	ELSEIF MONTH(NEW.tanggal)='3' THEN SET @bln = 'III';
+	ELSEIF MONTH(NEW.tanggal)='4' THEN SET @bln = 'IV';
+	ELSEIF MONTH(NEW.tanggal)='5' THEN SET @bln = 'V';
+	ELSEIF MONTH(NEW.tanggal)='6' THEN SET @bln = 'VI';
+	ELSEIF MONTH(NEW.tanggal)='7' THEN SET @bln = 'VII';
+	ELSEIF MONTH(NEW.tanggal)='8' THEN SET @bln = 'VIII';
+	ELSEIF MONTH(NEW.tanggal)='9' THEN SET @bln = 'IX';
+	ELSEIF MONTH(NEW.tanggal)='10' THEN SET @bln = 'X';
+	ELSEIF MONTH(NEW.tanggal)='11' THEN SET @bln = 'XI';
+	ELSEIF MONTH(NEW.tanggal)='12' THEN SET @bln = 'XII';
+	END IF;
+
+	SET @perus = (SELECT kode_perusahaan FROM tb_perusahaan WHERE id_perusahaan = NEW.id_perusahaan), 
+	@doc = (SELECT kode_document FROM jenis_doc WHERE id_document = NEW.id_document),
+	@depart = (SELECT nama_department FROM tb_department WHERE id_department = NEW.id_department),
+	@ttd = (SELECT kode_penandatangan FROM penandatangan WHERE id_penandatangan = NEW.id_penandatangan), 
+	@auto_id = (SELECT IFNULL(MAX(LEFT(nomor_skuasa,3)),0)+1 FROM sk_dir WHERE id_perusahaan = NEW.id_perusahaan),
+	NEW.nomor_skuasa = CONCAT_WS('/',LPAD(@auto_id,3,0),@perus,(CONCAT_WS('-',@doc,@depart)),@ttd,@bln,YEAR(NEW.tanggal));
+    END;
+$$
+
+DELIMITER ;

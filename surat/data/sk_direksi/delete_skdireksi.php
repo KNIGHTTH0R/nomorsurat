@@ -3,8 +3,8 @@
 <?php 
 include "../../../Connections/koneksi.php";
 
-$ID_konselor = $_GET['id'];
-$query = "DELETE FROM konselor WHERE ID_konselor = '$ID_konselor'";
+$id_skdir = $_GET['id'];
+$query = "DELETE FROM konselor WHERE id_skdir = '$id_skdir'";
 $exec = mysql_query($query);
 
 if($exec)
